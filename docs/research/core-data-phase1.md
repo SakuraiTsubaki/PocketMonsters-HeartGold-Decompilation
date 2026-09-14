@@ -23,7 +23,7 @@ The same six archives are byte-identical between the project-provided HeartGold 
 - evolution: **0 changed records**.
 - learnsets: **14 changed records**: 155 Cyndaquil, 156 Quilava, 157 Typhlosion, 249 Lugia, 250 Ho-Oh, 382 Kyogre, 383 Groudon, 384 Rayquaza, 449 Hippopotas, 450 Hippowdon, 483 Dialga, 484 Palkia, 487 Giratina, and 501 Giratina Origin.
 - moves: **1 changed record**, Hail (258).
-- items: 446 → 514 records; key-item insertion/reordering means raw same-index differences are not equivalent to semantic item changes.
+- items: 446 → 514 data records. Logical item-ID/data-ID remapping is required; raw same-index comparison is not semantic comparison.
 - growth tables: byte-identical.
 
 ## Personal-data changes
@@ -65,9 +65,23 @@ The complete before/after learnset records are documented in the Platinum reposi
 
 Hail (258) is the only Platinum→HGSS move-record change. Platinum has flags byte `0x02`; HGSS has `0x00`. Under the Generation IV move-flag ordering this clears `MOVE_FLAG_CAN_PROTECT`. All other Hail fields are identical.
 
-## Item-table observations
+## Item-table alignment result
 
-Confirmed field-level changes that are not merely count differences include Platinum's Growth/Damp/Stable/Gooey Mulch entries losing their field-use function in HGSS. The HGSS item archive has 68 more members overall and introduces/reworks Johto/HGSS key-item space. A name-aligned item comparison is required before assigning a semantic-change count.
+Raw NARC member indices are not logical item IDs. HGSS keeps the logical Generation IV item-ID space but changes the dense item-data mapping:
+
+- `ITEM_GRISEOUS_ORB` is data member 112 in HGSS.
+- logical IDs 113–134 remain unused and map to fallback data rather than dedicated records.
+- `ITEM_EXPLORER_KIT` (logical ID 428) no longer has a dedicated item-data member and maps to the fallback record.
+- `ITEM_LOOT_SACK` therefore begins at data member 406.
+- Platinum's `VS Recorder`, `Gracidea`, and `Secret Key` are retained as HGSS data members 442–444.
+- all 69 HGSS-new logical item IDs 468–536 have dedicated data records, producing the net archive growth `446 - 1 + 69 = 514`.
+
+After logical-ID/data-ID alignment, the directly observed existing-item parameter changes are:
+
+- `X Sp. Def` (ID 62): HGSS adds the missing low/medium friendship modifiers (`+1`, `+1`), bringing it in line with the other X-stat items.
+- `Growth Mulch`, `Damp Mulch`, `Stable Mulch`, `Gooey Mulch` (IDs 95–98): the Platinum field-use handler is cleared in HGSS.
+
+The apparent numeric changes in Griseous/Adamant/Lustrous Orb hold-effect bytes and in the VS Recorder/Gracidea field-use-function byte are treated as **enum/handler index remapping**, not by themselves as semantic behavior changes.
 
 ## HG ↔ SS
 
