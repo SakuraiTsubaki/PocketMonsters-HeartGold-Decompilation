@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters: HeartGold",
+  "region": "South Korea",
+  "language": "Korean",
+  "game_code": "IPKK",
+  "rom_version": 0,
+  "representation": "128 MiB catalog ROM-image representation",
+  "size_bytes": 134217728,
+  "clean_reference": {
+    "status": "external_reference_with_representation_conflict",
+    "primary_catalog": {
+      "crc32": "9dd259b1",
+      "md5": "baef94da2cd9f1c52ba0a946eb75e439",
+      "sha1": "9f17dea01a2bbb80faf0dcc2c2ced03b0c520a1a",
+      "source": "GameTDB IPKK"
+    },
+    "alternate_catalog_identity": {
+      "crc32": "23850525",
+      "md5": "7d4c656de7baabc455aacdec85b18ad5",
+      "sha1": "52516d1690d01b59e03c7fe3b1259239f5daea38",
+      "source": "ScreenScraper Korean HeartGold entry",
+      "note": "Retained as a distinct catalog/dump representation until the exact secure-area/encryption convention is mapped."
+    }
+  },
+  "observed_source": {
+    "filename": "포켓몬스터 하트골드.nds",
+    "crc32": "650745ad",
+    "md5": "81de94bae7a9033fe077cc885addcfe4",
+    "sha1": "5834fb3a2d751c48501d47d6a56898d7af6ccf9e",
+    "classification": "scene_comparison_source_nonmatching",
+    "relation_to_clean_reference": "known historical scene identity; excluded from whole-ROM exact-match claims"
+  },
+  "verification": {
+    "local_clean_bytes_available": false,
+    "exact_clean_repair_performed": false,
+    "note": "Do not collapse the two external full-image identities until their representation difference is proven. Content-level observations may still be promoted when the relevant extracted files independently match verified references."
+  }
+}
