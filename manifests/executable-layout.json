@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "game": "HeartGold",
+  "region": "Korea",
+  "language": "Korean",
+  "target": {"title": "POKEMON HG", "game_code": "IPKK", "rom_version_byte": 0, "file_size": 134217728, "hashes": {"md5": "81de94bae7a9033fe077cc885addcfe4", "sha1": "5834fb3a2d751c48501d47d6a56898d7af6ccf9e", "sha256": "659f20ca1d4f43b8b675d3c47217bb875a4f14c62438b08fa42f60467e2bed43"}},
+  "arm9": {"rom_offset": 16384, "rom_size": 765204, "load_address": 33554432, "entry_address": 33556480, "end_address": 34319636, "hashes": {"md5": "531a5c8010c73d0a19dfa248d8f9a9db", "sha1": "46413616c2e77d836ef09cdd01c04eaf206ee791", "sha256": "a7af9696d570c1d4dd4a47024964fe0d204229c435d539461ed8f6fc8eb729d1"}},
+  "arm7": {"rom_offset": 3111424, "rom_size": 161496, "load_address": 37224448, "entry_address": 37224448, "end_address": 37385944, "hashes": {"md5": "132bdfc8146b75a398046c8df991f763", "sha1": "1d0b3418b85fa8b5e1a9e345d3a182073cb968ac", "sha256": "746355ed51b324933542a7c4fcf109a5f83755a97c95b834ffd08caf6d4fafea"}},
+  "overlay_tables": {"arm9": {"rom_offset": 781824, "size": 4128, "count": 129}, "arm7": {"rom_offset": 0, "size": 0, "count": 0}},
+  "addressing_note": "Addresses are observed Nintendo DS runtime/load addresses from the ROM header and overlay table; names remain address-based until independently identified."
+}
