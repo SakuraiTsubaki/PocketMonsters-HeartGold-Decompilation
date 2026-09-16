@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+H="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+export APPIMAGE_EXTRACT_AND_RUN=1
+[[ -n "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ]] || export QT_QPA_PLATFORM="${QT_QPA_PLATFORM:-offscreen}"
+exec "$H/../melonds/melonDS.AppImage" "$@"
