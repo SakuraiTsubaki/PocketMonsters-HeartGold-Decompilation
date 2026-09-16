@@ -6,9 +6,20 @@
 - Working target name: Pocket Monsters HeartGold
 - Platform family: Nintendo DS
 - Series generation: Generation IV
-- Exact release, region, revision, and build: **not yet selected**
+- Exact release, region, revision, and build: **Korea Korean, game code `IPKK`, header ROM version `0`; local input identified, independent preservation-catalog match pending**
 
 The repository name is a working label, not proof of a particular binary. No address, symbol, format, or behavior should be treated as target fact until the exact build is identified.
+
+## Selected identifiers
+
+- Official/localized title: 포켓몬스터 하트골드
+- Game code: `IPKK`
+- Header title: `POKEMON HG`
+- Region and language: Korea, Korean
+- Header ROM version: `0`
+- Complete ROM size: `134217728` bytes
+- SHA-256: `659f20ca1d4f43b8b675d3c47217bb875a4f14c62438b08fa42f60467e2bed43`
+- Evidence record: [`analysis/rom-identity.md`](analysis/rom-identity.md)
 
 ## Identity checklist
 
