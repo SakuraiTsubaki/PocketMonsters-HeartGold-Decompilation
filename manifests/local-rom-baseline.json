@@ -1,0 +1,14 @@
+{
+  "input_name": "포켓몬스터 하트골드.nds",
+  "title": "POKEMON HG",
+  "game_code": "IPKK",
+  "rom_version": 0,
+  "size": 134217728,
+  "crc32": "650745ad",
+  "sha256": "659f20ca1d4f43b8b675d3c47217bb875a4f14c62438b08fa42f60467e2bed43",
+  "arm9_sha256": "a7af9696d570c1d4dd4a47024964fe0d204229c435d539461ed8f6fc8eb729d1",
+  "arm7_sha256": "746355ed51b324933542a7c4fcf109a5f83755a97c95b834ffd08caf6d4fafea",
+  "fat_file_count": 511,
+  "arm9_overlay_count": 129,
+  "arm7_overlay_count": 0
+}
